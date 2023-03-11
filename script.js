@@ -28,6 +28,7 @@ function playRound (playerSelection , computerSelection) {
 function game (){
     let playerScore = 0;
     let computerScore = 0;
+    let gameResult = ``
     for (let i = 0 ; i < 5 ; i++){
         let playerSelection = prompt("Enter rock ,paper or scissors");
         let computerSelection = getComputerChoice();
