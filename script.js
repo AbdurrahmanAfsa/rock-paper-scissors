@@ -26,10 +26,25 @@ function playRound (playerSelection , computerSelection) {
 }
 
 function game (){
+    let playerScore = 0;
+    let computerScore = 0;
     for (let i = 0 ; i < 5 ; i++){
         let playerSelection = prompt("Enter rock ,paper or scissors");
         let computerSelection = getComputerChoice();
         console.log(playRound(playerSelection , computerSelection))
+        if (result == "You lose! rock beats scissors"){
+            computerScore += 1;
+        }else if (result == "You lose! scissors beat paper"){
+            computerScore += 1;
+        }else if (result == "You lose! paper beats rock"){
+            computerScore += 1;
+        }else if (result == "You win !!"){
+            playerScore += 1;
+        }else {
+            playerScore = playerScore;
+            computerScore = computerScore;
+        }
+        console.log(`Result: You(${playerScore}) - Computer(${computerScore})`)
     }
 }
 
