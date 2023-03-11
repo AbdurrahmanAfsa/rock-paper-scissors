@@ -54,6 +54,7 @@ function game (){
     }else {
         gameResult = `It's a tie`
     }
+    console.log(gameResult)
 }
 
 game ();
