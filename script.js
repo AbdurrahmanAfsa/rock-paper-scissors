@@ -21,3 +21,13 @@ function playRound (playerSelection , computerSelection) {
         return "It's a tie"
     }
 }
+
+function game (){
+    for (let i = 0 ; i < 5 ; i++){
+        let playerSelection = prompt("Enter rock ,paper or scissors");
+        let computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection , computerSelection))
+    }
+}
+
+game ();
