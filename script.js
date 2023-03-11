@@ -4,22 +4,25 @@ function getComputerChoice (){
     return computerChoice;
 }
 
+let result = ""
+
 function playRound (playerSelection , computerSelection) {
     if (playerSelection == "rock" && computerSelection == "paper"){
-        return "You lose, paper beats rock"
+        result = "You lose! paper beats rock"
     }else if (playerSelection == "rock" && computerSelection == "scissors"){
-        return "You win !!"
+        result = "You win !!"
     }else if (playerSelection == "paper" && computerSelection == "rock"){
-        return "You win !!"
+        result = "You win !!"
     }else if (playerSelection == "paper" && computerSelection == "scissors"){
-        return "You lose! scissors beat paper"
+        result = "You lose! scissors beat paper"
     }else if (playerSelection == "scissors" && computerSelection == "rock"){
-        return "You lose! rock beats scissors"
+        result = "You lose! rock beats scissors"
     }else if (playerSelection == "scissors" && computerSelection == "paper"){
-        return "You win !!"
+        result = "You win !!"
     }else {
-        return "It's a tie"
+        result = "It's a tie"
     }
+    return result
 }
 
 function game (){
