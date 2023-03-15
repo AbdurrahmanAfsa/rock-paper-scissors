@@ -1,8 +1,8 @@
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
-const resultContainer = document.querySelector(".result")
-const scoreContainer = document.querySelector('.score')
+let resultContainer = document.querySelector(".result")
+let scoreContainer = document.querySelector('.score')
 
 function getComputerChoice (){
     let choices = ["rock" , 'paper' , 'scissors'];
@@ -16,18 +16,26 @@ let computerScore = 0;
 function playRound (playerSelection , computerSelection) {
     if (playerSelection == "rock" && computerSelection == "paper"){
         result = "You lose! paper beats rock"
+        computerScore += 1;
     }else if (playerSelection == "rock" && computerSelection == "scissors"){
         result = "You win !!"
+        playerScore += 1;
     }else if (playerSelection == "paper" && computerSelection == "rock"){
         result = "You win !!"
+        playerScore += 1;
     }else if (playerSelection == "paper" && computerSelection == "scissors"){
         result = "You lose! scissors beat paper"
+        computerScore += 1;
     }else if (playerSelection == "scissors" && computerSelection == "rock"){
         result = "You lose! rock beats scissors"
+        computerScore += 1;
     }else if (playerSelection == "scissors" && computerSelection == "paper"){
         result = "You win !!"
+        playerScore += 1;
     }else {
         result = "It's a tie"
+        playerScore  = playerScore;
+        computerScore = computerScore;
     }
     return result
 }
