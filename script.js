@@ -32,6 +32,20 @@ function playRound (playerSelection , computerSelection) {
     return result
 }
 
+function whoWon (){
+    if(playerScore == 5){
+        resultContainer.textContent = "Game Over"
+        scoreContainer.textContent = "Congratulations You WON !!!"
+        playerScore = 0;
+        computerScore =0;
+    }else if (computerScore == 5){
+        resultContainer.textContent = "Game Over"
+        scoreContainer.textContent = "You Lost, Try Again"
+        playerScore = 0;
+        computerScore =0;
+    }
+}
+
 // function game (){
 //     let playerScore = 0;
 //     let computerScore = 0;
