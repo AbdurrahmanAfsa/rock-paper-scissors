@@ -57,6 +57,12 @@ paperButton.addEventListener('click' , () => {
     scoreContainer.textContent = `You: ${playerScore} - Computer: ${computerScore}`;
     whoWon ();
 })
+
+scissorsButton.addEventListener('click' , () => {
+    resultContainer.textContent = playRound("scissors" ,getComputerChoice());
+    scoreContainer.textContent = `You: ${playerScore} - Computer: ${computerScore}`;
+    whoWon ();
+})
 // function game (){
 //     let playerScore = 0;
 //     let computerScore = 0;
