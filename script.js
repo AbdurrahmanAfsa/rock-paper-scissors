@@ -46,6 +46,12 @@ function whoWon (){
     }
 }
 
+rockButton.addEventListener('click' , () => {
+    resultContainer.textContent = playRound("rock" ,getComputerChoice());
+    scoreContainer.textContent = `You: ${playerScore} - Computer: ${computerScore}`;
+    whoWon();
+})
+
 // function game (){
 //     let playerScore = 0;
 //     let computerScore = 0;
