@@ -10,7 +10,8 @@ function getComputerChoice (){
     return computerChoice;
 }
 
-let result = ""
+let playerScore = 0;
+let computerScore = 0;
 
 function playRound (playerSelection , computerSelection) {
     if (playerSelection == "rock" && computerSelection == "paper"){
