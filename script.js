@@ -1,6 +1,8 @@
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
+const resultContainer = document.querySelector(".result")
+const scoreContainer = document.querySelector('.score')
 
 function getComputerChoice (){
     let choices = ["rock" , 'paper' , 'scissors'];
